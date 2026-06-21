@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TANZZ KINGNOKOS V6</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#050505;
+color:white;
+padding-bottom:90px;
+}
+
+:root{
+--red:#ff1f1f;
+--dark:#0d0d0d;
+}
+
+header{
+padding:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#080808;
+border-bottom:1px solid #222;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.brand img{
+width:60px;
+height:60px;
+border-radius:50%;
+border:2px solid var(--red);
+box-shadow:0 0 20px red;
+}
+
+.brand h2{
+font-size:22px;
+font-weight:800;
+}
+
+.brand span{
+color:var(--red);
+}
+
+.balance{
+background:#111;
+padding:12px 18px;
+border-radius:18px;
+border:1px solid var(--red);
+font-weight:700;
+}
+
+.slider{
+padding:15px;
+}
+
+.slider img{
+width:100%;
+border-radius:25px;
+box-shadow:0 0 30px rgba(255,0,0,.4);
+}
+
+.status{
+margin:15px;
+padding:14px;
+background:#101010;
+border-radius:15px;
+border-left:5px solid #00ff66;
+font-weight:600;
+}
+
+.title{
+padding:15px;
+font-size:28px;
+font-weight:800;
+color:var(--red);
+}
+
+.services{
+padding:15px;
+display:grid;
+gap:15px;
+}
+
+.card{
+background:#111;
+border:1px solid #222;
+border-radius:25px;
+padding:20px;
+display:flex;
+gap:15px;
+align-items:center;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+border-color:red;
+}
+
+.icon{
+width:75px;
+height:75px;
+border-radius:20px;
+background:#1a1a1a;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:35px;
+}
+
+.content{
+flex:1;
+}
+
+.content h3{
+font-size:24px;
+}
+
+.content p{
+color:#aaa;
+}
+
+.btn{
+margin-top:10px;
+background:linear-gradient(45deg,#ff0000,#ff4d4d);
+border:none;
+padding:12px 30px;
+border-radius:15px;
+font-weight:700;
+color:white;
+}
+
+.menu{
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+background:#090909;
+border-top:1px solid #222;
+display:flex;
+justify-content:space-around;
+padding:12px;
+}
+
+.menu div{
+text-align:center;
+font-size:13px;
+}
+
+.popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.8);
+display:none;
+align-items:center;
+justify-content:center;
+}
+
+.popup-content{
+background:#111;
+width:90%;
+max-width:350px;
+padding:20px;
+border-radius:20px;
+}
+
+.popup-content h3{
+margin-bottom:15px;
+}
+
+input{
+width:100%;
+padding:12px;
+margin-bottom:10px;
+background:#1d1d1d;
+border:none;
+border-radius:10px;
+color:white;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="brand">
+<img src="logo.png">
+<div>
+<h2>TANZZ <span>KINGNOKOS</span></h2>
+<small>Layanan Digital Premium</small>
+</div>
+</div>
+
+<div class="balance">
+Rp <span id="saldo">50000</span>
+</div>
+
+</header>
+
+<div class="slider">
+<img id="banner" src="banner.jpg">
+</div>
+
+<div class="status">
+🟢 SERVER ONLINE • CEPAT • AMAN • PREMIUM
+</div>
+
+<div class="title">
+Kategori Layanan
+</div>
+
+<div class="services">
+
+<div class="card">
+<div class="icon">📱</div>
+<div class="content">
+<h3>Nomor Virtual</h3>
+<p>Layanan nomor virtual berbagai negara.</p>
+<button class="btn" onclick="beli('Nomor Virtual')">BELI</button>
+</div>
+</div>
+
+<div class="card">
+<div class="icon">🚀</div>
+<div class="content">
+<h3>Aktivasi Akun</h3>
+<p>Aktivasi berbagai platform digital.</p>
+<button class="btn" onclick="beli('Aktivasi Akun')">BELI</button>
+</div>
+</div>
+
+<div class="card">
+<div class="icon">💎</div>
+<div class="content">
+<h3>Panel Sosmed</h3>
+<p>Layanan digital premium.</p>
+<button class="btn" onclick="beli('Panel Sosmed')">BELI</button>
+</div>
+</div>
+
+<div class="card">
+<div class="icon">🌐</div>
+<div class="content">
+<h3>Jasa Website</h3>
+<p>Pembuatan website premium.</p>
+<button class="btn" onclick="beli('Website')">BELI</button>
+</div>
+</div>
+
+</div>
+
+<div class="menu">
+<div>🏠<br>Home</div>
+<div onclick="login()">👤<br>Login</div>
+<div>🛒<br>Order</div>
+<div>⚙️<br>Profil</div>
+</div>
+
+<div class="popup" id="popup">
+<div class="popup-content">
+<h3>Login Member</h3>
+<input placeholder="Username">
+<input type="password" placeholder="Password">
+<button class="btn" onclick="closeLogin()">Masuk</button>
+</div>
+</div>
+
+<script>
+
+let saldo=50000;
+
+setInterval(()=>{
+saldo+=Math.floor(Math.random()*100);
+document.getElementById("saldo").innerHTML=
+saldo.toLocaleString("id-ID");
+},1500);
+
+function beli(nama){
+alert("Layanan dipilih : "+nama);
+}
+
+function login(){
+document.getElementById("popup").style.display="flex";
+}
+
+function closeLogin(){
+document.getElementById("popup").style.display="none";
+}
+
+</script>
+
+</body>
+</html>
