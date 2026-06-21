@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TANZZ KINGNOKOS</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -17,198 +17,160 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#050505;
+background:#070707;
 color:white;
-padding-bottom:100px;
+padding-bottom:90px;
 }
 
-/* HEADER */
-
-.topbar{
+header{
+padding:15px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px;
-background:#0e0e0e;
 border-bottom:1px solid #1d1d1d;
-position:sticky;
-top:0;
-z-index:999;
+background:#0b0b0b;
 }
 
 .brand{
 display:flex;
 align-items:center;
-gap:10px;
+gap:12px;
 }
 
 .brand img{
-width:50px;
-height:50px;
+width:55px;
+height:55px;
 border-radius:50%;
-border:2px solid #ff2d2d;
+border:2px solid #ff2a2a;
 }
 
 .brand h2{
-font-size:18px;
+font-size:20px;
 }
 
-.brand p{
-font-size:11px;
-color:#aaa;
+.brand span{
+color:#ff3030;
 }
 
 .balance{
-background:linear-gradient(45deg,#ff2d2d,#ff5c5c);
+background:#111;
 padding:10px 15px;
-border-radius:12px;
+border-radius:15px;
+border:1px solid #ff3030;
 font-size:14px;
-font-weight:bold;
 }
 
-/* SLIDER */
-
-.slider{
+.banner{
 padding:15px;
 }
 
-.slider img{
+.banner img{
 width:100%;
 border-radius:20px;
-box-shadow:0 0 25px rgba(255,0,0,.4);
+border:1px solid #ff3030;
+box-shadow:0 0 20px rgba(255,0,0,.3);
 }
 
-/* MENU */
-
-.menu-title{
+.title{
 padding:0 15px;
 margin-top:10px;
 margin-bottom:10px;
-font-size:18px;
+font-size:26px;
 font-weight:700;
+color:#ff4040;
 }
 
-.menu-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:15px;
-padding:15px;
-}
-
-.menu-card{
+.card{
 background:#111;
-padding:20px;
+margin:12px 15px;
 border-radius:20px;
-text-align:center;
-border:1px solid #222;
-cursor:pointer;
-transition:.3s;
-text-decoration:none;
-color:white;
-}
-
-.menu-card:hover{
-transform:translateY(-5px);
-box-shadow:0 0 20px rgba(255,0,0,.2);
-}
-
-.menu-card span{
-font-size:40px;
-display:block;
-margin-bottom:10px;
-}
-
-/* PRODUK */
-
-.product-card{
-background:#111;
-margin:15px;
-padding:20px;
-border-radius:20px;
-border:1px solid #222;
+padding:18px;
 display:flex;
 justify-content:space-between;
 align-items:center;
+border:1px solid #222;
+transition:.3s;
+cursor:pointer;
 }
 
-.product-left{
+.card:hover{
+transform:translateY(-4px);
+border-color:#ff3030;
+}
+
+.left{
 display:flex;
 align-items:center;
 gap:15px;
 }
 
-.product-icon{
-font-size:35px;
+.icon{
+width:60px;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+background:#1a1a1a;
+border-radius:15px;
 }
 
-.product-card h3{
-font-size:16px;
+.card h3{
+font-size:22px;
 }
 
-.product-card p{
-font-size:12px;
-color:#aaa;
+.card p{
+color:#999;
 }
 
-.buy-btn{
-background:linear-gradient(45deg,#ff2d2d,#ff5a5a);
-border:none;
-padding:10px 20px;
+.buy{
+background:linear-gradient(45deg,#ff0000,#ff5555);
+padding:12px 22px;
 border-radius:12px;
-color:white;
-font-weight:700;
-cursor:pointer;
-}
-
-/* SERVER */
-
-.server-section{
-padding:15px;
-}
-
-.server-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:15px;
-margin-top:15px;
-}
-
-.server-card{
-background:#111;
-padding:20px;
-border-radius:18px;
-border:1px solid #222;
-}
-
-.server-card h4{
-margin-bottom:10px;
-}
-
-.online{
-color:#00ff88;
 font-weight:bold;
 }
 
-/* TESTIMONI */
-
-.testi{
+.status{
 padding:15px;
 }
 
-.testi-card{
-background:#111;
-padding:20px;
-border-radius:18px;
-border:1px solid #222;
+.status-title{
+display:flex;
+justify-content:space-between;
 margin-bottom:15px;
 }
 
-/* WA */
+.online{
+background:#00c853;
+padding:8px 15px;
+border-radius:20px;
+}
 
-.wa{
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+}
+
+.server{
+background:#111;
+padding:15px;
+border-radius:20px;
+border:1px solid #222;
+}
+
+.server h4{
+margin-bottom:10px;
+}
+
+.ping{
+color:#00ff88;
+}
+
+.whatsapp{
 position:fixed;
-bottom:90px;
 right:20px;
+bottom:100px;
 width:65px;
 height:65px;
 border-radius:50%;
@@ -218,239 +180,188 @@ justify-content:center;
 align-items:center;
 font-size:30px;
 text-decoration:none;
-box-shadow:0 0 20px rgba(37,211,102,.5);
+color:white;
+box-shadow:0 0 25px #25D366;
+z-index:999;
 }
 
-/* NAVBAR */
-
-.bottom-nav{
+.bottom{
 position:fixed;
 bottom:0;
 left:0;
 width:100%;
-background:#0e0e0e;
+background:#0b0b0b;
 display:flex;
 justify-content:space-around;
-padding:12px;
+padding:15px;
 border-top:1px solid #222;
 }
 
-.bottom-nav a{
-text-decoration:none;
+.bottom a{
 color:white;
-display:flex;
+text-decoration:none;
+font-size:14px;
+text-align:center;
+}
+
+.bottom .active{
+color:#ff3030;
+}
+
+@media(max-width:700px){
+
+.card{
 flex-direction:column;
-align-items:center;
-font-size:12px;
+gap:15px;
+text-align:center;
 }
 
-.bottom-nav i{
-font-size:20px;
-margin-bottom:4px;
+.grid{
+grid-template-columns:1fr;
 }
 
-.center-btn{
-background:#ff2d2d;
-width:60px;
-height:60px;
-border-radius:50%;
-display:flex !important;
-justify-content:center;
-align-items:center;
-margin-top:-30px;
-box-shadow:0 0 20px rgba(255,0,0,.5);
 }
 
 </style>
 </head>
-
 <body>
 
-<header class="topbar">
+<header>
 
 <div class="brand">
 <img src="logo.png">
 <div>
-<h2>TANZZ KINGNOKOS</h2>
-<p>Layanan Digital Premium</p>
+<h2>TANZZ <span>KINGNOKOS</span></h2>
+<small>Layanan Digital Premium</small>
 </div>
 </div>
 
 <div class="balance">
-Rp 0
+50.000 IDR
 </div>
 
 </header>
 
-<div class="slider">
-<img id="banner" src="banner1.jpg">
+<div class="banner">
+<img src="banner.jpg">
 </div>
 
-<h2 class="menu-title">Kategori Layanan</h2>
+<h2 class="title">Kategori Layanan</h2>
 
-<div class="menu-grid">
-
-<a href="#" class="menu-card">
-<span>📱</span>
-Nomor Virtual
-</a>
-
-<a href="#" class="menu-card">
-<span>🚀</span>
-Aktivasi Akun
-</a>
-
-<a href="#" class="menu-card">
-<span>💎</span>
-Panel Sosmed
-</a>
-
-<a href="#" class="menu-card">
-<span>🎮</span>
-Top Up Game
-</a>
-
-<a href="#" class="menu-card">
-<span>💳</span>
-E-Wallet
-</a>
-
-<a href="#" class="menu-card">
-<span>📦</span>
-Reseller
-</a>
-
-</div>
-
-<div class="product-card">
-
-<div class="product-left">
-
-<div class="product-icon">
-📱
-</div>
-
+<div class="card">
+<div class="left">
+<div class="icon">📱</div>
 <div>
 <h3>Nomor Virtual</h3>
-<p>Beli Nomor Virtual Instan</p>
+<p>Beli nomor sementara</p>
+</div>
+</div>
+<div class="buy">BELI</div>
 </div>
 
+<div class="card">
+<div class="left">
+<div class="icon">🚀</div>
+<div>
+<h3>Aktivasi Akun</h3>
+<p>Aktivasi berbagai platform</p>
+</div>
+</div>
+<div class="buy">BELI</div>
 </div>
 
-<a href="https://wa.me/6281234567890">
-<button class="buy-btn">
-BELI
-</button>
-</a>
-
+<div class="card">
+<div class="left">
+<div class="icon">💎</div>
+<div>
+<h3>Panel Sosmed</h3>
+<p>Followers, Likes, Views</p>
+</div>
+</div>
+<div class="buy">BELI</div>
 </div>
 
-<section class="server-section">
+<div class="card">
+<div class="left">
+<div class="icon">🎮</div>
+<div>
+<h3>Top Up Game</h3>
+<p>ML, FF, PUBG, dll</p>
+</div>
+</div>
+<div class="buy">BELI</div>
+</div>
 
+<div class="card">
+<div class="left">
+<div class="icon">💳</div>
+<div>
+<h3>E-Wallet</h3>
+<p>DANA, OVO, GOPAY</p>
+</div>
+</div>
+<div class="buy">BELI</div>
+</div>
+
+<div class="card">
+<div class="left">
+<div class="icon">🛟</div>
+<div>
+<h3>Support</h3>
+<p>Bantuan pelanggan</p>
+</div>
+</div>
+<div class="buy">CHAT</div>
+</div>
+
+<section class="status">
+
+<div class="status-title">
 <h2>Status Server</h2>
+<div class="online">6/6 Online</div>
+</div>
 
-<div class="server-grid">
+<div class="grid">
 
-<div class="server-card">
+<div class="server">
 <h4>Main Page</h4>
-<p class="online">🟢 Online</p>
-<span>29ms</span>
+<div class="ping">59ms</div>
 </div>
 
-<div class="server-card">
+<div class="server">
 <h4>CDN Static</h4>
-<p class="online">🟢 Online</p>
-<span>14ms</span>
+<div class="ping">84ms</div>
 </div>
 
-<div class="server-card">
-<h4>Database</h4>
-<p class="online">🟢 Online</p>
-<span>17ms</span>
+<div class="server">
+<h4>CDN Assets</h4>
+<div class="ping">87ms</div>
 </div>
 
-<div class="server-card">
-<h4>API Server</h4>
-<p class="online">🟢 Online</p>
-<span>20ms</span>
+<div class="server">
+<h4>Schedule</h4>
+<div class="ping">29ms</div>
 </div>
 
 </div>
 
 </section>
 
-<section class="testi">
-
-<h2>Testimoni</h2>
-
-<div class="testi-card">
-⭐⭐⭐⭐⭐<br>
-Pelayanan cepat dan terpercaya.
-</div>
-
-<div class="testi-card">
-⭐⭐⭐⭐⭐<br>
-Proses instan dan harga terjangkau.
-</div>
-
-</section>
-
-<a href="https://wa.me/6281234567890" class="wa">
+<a href="https://wa.me/6281234567890" class="whatsapp">
 💬
 </a>
 
-<nav class="bottom-nav">
+<div class="bottom">
 
-<a href="#">
-🏠
-Home
-</a>
+<a class="active">🏠<br>Home</a>
 
-<a href="#">
-💰
-Saldo
-</a>
+<a>📱<br>Nokos</a>
 
-<a href="#" class="center-btn">
-🛒
-</a>
+<a>🛒<br>Order</a>
 
-<a href="#">
-📊
-Aktivitas
-</a>
+<a>👤<br>Profil</a>
 
-<a href="#">
-👤
-Profil
-</a>
-
-</nav>
-
-<script>
-
-const banners = [
-"banner1.jpg",
-"banner2.jpg",
-"banner3.jpg"
-];
-
-let current = 0;
-
-setInterval(() => {
-
-current++;
-
-if(current >= banners.length){
-current = 0;
-}
-
-document.getElementById("banner").src =
-banners[current];
-
-},3000);
-
-</script>
+</div>
 
 </body>
 </html><!DOCTYPE html>
@@ -460,7 +371,7 @@ banners[current];
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TANZZ KINGNOKOS</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -472,198 +383,160 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#050505;
+background:#070707;
 color:white;
-padding-bottom:100px;
+padding-bottom:90px;
 }
 
-/* HEADER */
-
-.topbar{
+header{
+padding:15px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px;
-background:#0e0e0e;
 border-bottom:1px solid #1d1d1d;
-position:sticky;
-top:0;
-z-index:999;
+background:#0b0b0b;
 }
 
 .brand{
 display:flex;
 align-items:center;
-gap:10px;
+gap:12px;
 }
 
 .brand img{
-width:50px;
-height:50px;
+width:55px;
+height:55px;
 border-radius:50%;
-border:2px solid #ff2d2d;
+border:2px solid #ff2a2a;
 }
 
 .brand h2{
-font-size:18px;
+font-size:20px;
 }
 
-.brand p{
-font-size:11px;
-color:#aaa;
+.brand span{
+color:#ff3030;
 }
 
 .balance{
-background:linear-gradient(45deg,#ff2d2d,#ff5c5c);
+background:#111;
 padding:10px 15px;
-border-radius:12px;
+border-radius:15px;
+border:1px solid #ff3030;
 font-size:14px;
-font-weight:bold;
 }
 
-/* SLIDER */
-
-.slider{
+.banner{
 padding:15px;
 }
 
-.slider img{
+.banner img{
 width:100%;
 border-radius:20px;
-box-shadow:0 0 25px rgba(255,0,0,.4);
+border:1px solid #ff3030;
+box-shadow:0 0 20px rgba(255,0,0,.3);
 }
 
-/* MENU */
-
-.menu-title{
+.title{
 padding:0 15px;
 margin-top:10px;
 margin-bottom:10px;
-font-size:18px;
+font-size:26px;
 font-weight:700;
+color:#ff4040;
 }
 
-.menu-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:15px;
-padding:15px;
-}
-
-.menu-card{
+.card{
 background:#111;
-padding:20px;
+margin:12px 15px;
 border-radius:20px;
-text-align:center;
-border:1px solid #222;
-cursor:pointer;
-transition:.3s;
-text-decoration:none;
-color:white;
-}
-
-.menu-card:hover{
-transform:translateY(-5px);
-box-shadow:0 0 20px rgba(255,0,0,.2);
-}
-
-.menu-card span{
-font-size:40px;
-display:block;
-margin-bottom:10px;
-}
-
-/* PRODUK */
-
-.product-card{
-background:#111;
-margin:15px;
-padding:20px;
-border-radius:20px;
-border:1px solid #222;
+padding:18px;
 display:flex;
 justify-content:space-between;
 align-items:center;
+border:1px solid #222;
+transition:.3s;
+cursor:pointer;
 }
 
-.product-left{
+.card:hover{
+transform:translateY(-4px);
+border-color:#ff3030;
+}
+
+.left{
 display:flex;
 align-items:center;
 gap:15px;
 }
 
-.product-icon{
-font-size:35px;
+.icon{
+width:60px;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+background:#1a1a1a;
+border-radius:15px;
 }
 
-.product-card h3{
-font-size:16px;
+.card h3{
+font-size:22px;
 }
 
-.product-card p{
-font-size:12px;
-color:#aaa;
+.card p{
+color:#999;
 }
 
-.buy-btn{
-background:linear-gradient(45deg,#ff2d2d,#ff5a5a);
-border:none;
-padding:10px 20px;
+.buy{
+background:linear-gradient(45deg,#ff0000,#ff5555);
+padding:12px 22px;
 border-radius:12px;
-color:white;
-font-weight:700;
-cursor:pointer;
-}
-
-/* SERVER */
-
-.server-section{
-padding:15px;
-}
-
-.server-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:15px;
-margin-top:15px;
-}
-
-.server-card{
-background:#111;
-padding:20px;
-border-radius:18px;
-border:1px solid #222;
-}
-
-.server-card h4{
-margin-bottom:10px;
-}
-
-.online{
-color:#00ff88;
 font-weight:bold;
 }
 
-/* TESTIMONI */
-
-.testi{
+.status{
 padding:15px;
 }
 
-.testi-card{
-background:#111;
-padding:20px;
-border-radius:18px;
-border:1px solid #222;
+.status-title{
+display:flex;
+justify-content:space-between;
 margin-bottom:15px;
 }
 
-/* WA */
+.online{
+background:#00c853;
+padding:8px 15px;
+border-radius:20px;
+}
 
-.wa{
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+}
+
+.server{
+background:#111;
+padding:15px;
+border-radius:20px;
+border:1px solid #222;
+}
+
+.server h4{
+margin-bottom:10px;
+}
+
+.ping{
+color:#00ff88;
+}
+
+.whatsapp{
 position:fixed;
-bottom:90px;
 right:20px;
+bottom:100px;
 width:65px;
 height:65px;
 border-radius:50%;
@@ -673,239 +546,554 @@ justify-content:center;
 align-items:center;
 font-size:30px;
 text-decoration:none;
-box-shadow:0 0 20px rgba(37,211,102,.5);
+color:white;
+box-shadow:0 0 25px #25D366;
+z-index:999;
 }
 
-/* NAVBAR */
-
-.bottom-nav{
+.bottom{
 position:fixed;
 bottom:0;
 left:0;
 width:100%;
-background:#0e0e0e;
+background:#0b0b0b;
 display:flex;
 justify-content:space-around;
-padding:12px;
+padding:15px;
 border-top:1px solid #222;
 }
 
-.bottom-nav a{
-text-decoration:none;
+.bottom a{
 color:white;
-display:flex;
+text-decoration:none;
+font-size:14px;
+text-align:center;
+}
+
+.bottom .active{
+color:#ff3030;
+}
+
+@media(max-width:700px){
+
+.card{
 flex-direction:column;
-align-items:center;
-font-size:12px;
+gap:15px;
+text-align:center;
 }
 
-.bottom-nav i{
-font-size:20px;
-margin-bottom:4px;
+.grid{
+grid-template-columns:1fr;
 }
 
-.center-btn{
-background:#ff2d2d;
-width:60px;
-height:60px;
-border-radius:50%;
-display:flex !important;
-justify-content:center;
-align-items:center;
-margin-top:-30px;
-box-shadow:0 0 20px rgba(255,0,0,.5);
 }
 
 </style>
 </head>
-
 <body>
 
-<header class="topbar">
+<header>
 
 <div class="brand">
 <img src="logo.png">
 <div>
-<h2>TANZZ KINGNOKOS</h2>
-<p>Layanan Digital Premium</p>
+<h2>TANZZ <span>KINGNOKOS</span></h2>
+<small>Layanan Digital Premium</small>
 </div>
 </div>
 
 <div class="balance">
-Rp 0
+50.000 IDR
 </div>
 
 </header>
 
-<div class="slider">
-<img id="banner" src="banner1.jpg">
+<div class="banner">
+<img src="banner.jpg">
 </div>
 
-<h2 class="menu-title">Kategori Layanan</h2>
+<h2 class="title">Kategori Layanan</h2>
 
-<div class="menu-grid">
-
-<a href="#" class="menu-card">
-<span>📱</span>
-Nomor Virtual
-</a>
-
-<a href="#" class="menu-card">
-<span>🚀</span>
-Aktivasi Akun
-</a>
-
-<a href="#" class="menu-card">
-<span>💎</span>
-Panel Sosmed
-</a>
-
-<a href="#" class="menu-card">
-<span>🎮</span>
-Top Up Game
-</a>
-
-<a href="#" class="menu-card">
-<span>💳</span>
-E-Wallet
-</a>
-
-<a href="#" class="menu-card">
-<span>📦</span>
-Reseller
-</a>
-
-</div>
-
-<div class="product-card">
-
-<div class="product-left">
-
-<div class="product-icon">
-📱
-</div>
-
+<div class="card">
+<div class="left">
+<div class="icon">📱</div>
 <div>
 <h3>Nomor Virtual</h3>
-<p>Beli Nomor Virtual Instan</p>
+<p>Beli nomor sementara</p>
+</div>
+</div>
+<div class="buy">BELI</div>
 </div>
 
+<div class="card">
+<div class="left">
+<div class="icon">🚀</div>
+<div>
+<h3>Aktivasi Akun</h3>
+<p>Aktivasi berbagai platform</p>
+</div>
+</div>
+<div class="buy">BELI</div>
 </div>
 
-<a href="https://wa.me/6281234567890">
-<button class="buy-btn">
-BELI
-</button>
-</a>
-
+<div class="card">
+<div class="left">
+<div class="icon">💎</div>
+<div>
+<h3>Panel Sosmed</h3>
+<p>Followers, Likes, Views</p>
+</div>
+</div>
+<div class="buy">BELI</div>
 </div>
 
-<section class="server-section">
+<div class="card">
+<div class="left">
+<div class="icon">🎮</div>
+<div>
+<h3>Top Up Game</h3>
+<p>ML, FF, PUBG, dll</p>
+</div>
+</div>
+<div class="buy">BELI</div>
+</div>
 
+<div class="card">
+<div class="left">
+<div class="icon">💳</div>
+<div>
+<h3>E-Wallet</h3>
+<p>DANA, OVO, GOPAY</p>
+</div>
+</div>
+<div class="buy">BELI</div>
+</div>
+
+<div class="card">
+<div class="left">
+<div class="icon">🛟</div>
+<div>
+<h3>Support</h3>
+<p>Bantuan pelanggan</p>
+</div>
+</div>
+<div class="buy">CHAT</div>
+</div>
+
+<section class="status">
+
+<div class="status-title">
 <h2>Status Server</h2>
+<div class="online">6/6 Online</div>
+</div>
 
-<div class="server-grid">
+<div class="grid">
 
-<div class="server-card">
+<div class="server">
 <h4>Main Page</h4>
-<p class="online">🟢 Online</p>
-<span>29ms</span>
+<div class="ping">59ms</div>
 </div>
 
-<div class="server-card">
+<div class="server">
 <h4>CDN Static</h4>
-<p class="online">🟢 Online</p>
-<span>14ms</span>
+<div class="ping">84ms</div>
 </div>
 
-<div class="server-card">
-<h4>Database</h4>
-<p class="online">🟢 Online</p>
-<span>17ms</span>
+<div class="server">
+<h4>CDN Assets</h4>
+<div class="ping">87ms</div>
 </div>
 
-<div class="server-card">
-<h4>API Server</h4>
-<p class="online">🟢 Online</p>
-<span>20ms</span>
+<div class="server">
+<h4>Schedule</h4>
+<div class="ping">29ms</div>
 </div>
 
 </div>
 
 </section>
 
-<section class="testi">
-
-<h2>Testimoni</h2>
-
-<div class="testi-card">
-⭐⭐⭐⭐⭐<br>
-Pelayanan cepat dan terpercaya.
-</div>
-
-<div class="testi-card">
-⭐⭐⭐⭐⭐<br>
-Proses instan dan harga terjangkau.
-</div>
-
-</section>
-
-<a href="https://wa.me/6281234567890" class="wa">
+<a href="https://wa.me/6281234567890" class="whatsapp">
 💬
 </a>
 
-<nav class="bottom-nav">
+<div class="bottom">
 
-<a href="#">
-🏠
-Home
-</a>
+<a class="active">🏠<br>Home</a>
 
-<a href="#">
-💰
-Saldo
-</a>
+<a>📱<br>Nokos</a>
 
-<a href="#" class="center-btn">
-🛒
-</a>
+<a>🛒<br>Order</a>
 
-<a href="#">
-📊
-Aktivitas
-</a>
+<a>👤<br>Profil</a>
 
-<a href="#">
-👤
-Profil
-</a>
+</div>
 
-</nav>
+</body>
+</html><!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TANZZ KINGNOKOS</title>
 
-<script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-const banners = [
-"banner1.jpg",
-"banner2.jpg",
-"banner3.jpg"
-];
+<style>
 
-let current = 0;
-
-setInterval(() => {
-
-current++;
-
-if(current >= banners.length){
-current = 0;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
-document.getElementById("banner").src =
-banners[current];
+body{
+background:#070707;
+color:white;
+padding-bottom:90px;
+}
 
-},3000);
+header{
+padding:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #1d1d1d;
+background:#0b0b0b;
+}
 
-</script>
+.brand{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.brand img{
+width:55px;
+height:55px;
+border-radius:50%;
+border:2px solid #ff2a2a;
+}
+
+.brand h2{
+font-size:20px;
+}
+
+.brand span{
+color:#ff3030;
+}
+
+.balance{
+background:#111;
+padding:10px 15px;
+border-radius:15px;
+border:1px solid #ff3030;
+font-size:14px;
+}
+
+.banner{
+padding:15px;
+}
+
+.banner img{
+width:100%;
+border-radius:20px;
+border:1px solid #ff3030;
+box-shadow:0 0 20px rgba(255,0,0,.3);
+}
+
+.title{
+padding:0 15px;
+margin-top:10px;
+margin-bottom:10px;
+font-size:26px;
+font-weight:700;
+color:#ff4040;
+}
+
+.card{
+background:#111;
+margin:12px 15px;
+border-radius:20px;
+padding:18px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border:1px solid #222;
+transition:.3s;
+cursor:pointer;
+}
+
+.card:hover{
+transform:translateY(-4px);
+border-color:#ff3030;
+}
+
+.left{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.icon{
+width:60px;
+height:60px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+background:#1a1a1a;
+border-radius:15px;
+}
+
+.card h3{
+font-size:22px;
+}
+
+.card p{
+color:#999;
+}
+
+.buy{
+background:linear-gradient(45deg,#ff0000,#ff5555);
+padding:12px 22px;
+border-radius:12px;
+font-weight:bold;
+}
+
+.status{
+padding:15px;
+}
+
+.status-title{
+display:flex;
+justify-content:space-between;
+margin-bottom:15px;
+}
+
+.online{
+background:#00c853;
+padding:8px 15px;
+border-radius:20px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+}
+
+.server{
+background:#111;
+padding:15px;
+border-radius:20px;
+border:1px solid #222;
+}
+
+.server h4{
+margin-bottom:10px;
+}
+
+.ping{
+color:#00ff88;
+}
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:100px;
+width:65px;
+height:65px;
+border-radius:50%;
+background:#25D366;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:30px;
+text-decoration:none;
+color:white;
+box-shadow:0 0 25px #25D366;
+z-index:999;
+}
+
+.bottom{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:#0b0b0b;
+display:flex;
+justify-content:space-around;
+padding:15px;
+border-top:1px solid #222;
+}
+
+.bottom a{
+color:white;
+text-decoration:none;
+font-size:14px;
+text-align:center;
+}
+
+.bottom .active{
+color:#ff3030;
+}
+
+@media(max-width:700px){
+
+.card{
+flex-direction:column;
+gap:15px;
+text-align:center;
+}
+
+.grid{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<header>
+
+<div class="brand">
+<img src="logo.png">
+<div>
+<h2>TANZZ <span>KINGNOKOS</span></h2>
+<small>Layanan Digital Premium</small>
+</div>
+</div>
+
+<div class="balance">
+50.000 IDR
+</div>
+
+</header>
+
+<div class="banner">
+<img src="banner.jpg">
+</div>
+
+<h2 class="title">Kategori Layanan</h2>
+
+<div class="card">
+<div class="left">
+<div class="icon">📱</div>
+<div>
+<h3>Nomor Virtual</h3>
+<p>Beli nomor sementara</p>
+</div>
+</div>
+<div class="buy">BELI</div>
+</div>
+
+<div class="card">
+<div class="left">
+<div class="icon">🚀</div>
+<div>
+<h3>Aktivasi Akun</h3>
+<p>Aktivasi berbagai platform</p>
+</div>
+</div>
+<div class="buy">BELI</div>
+</div>
+
+<div class="card">
+<div class="left">
+<div class="icon">💎</div>
+<div>
+<h3>Panel Sosmed</h3>
+<p>Followers, Likes, Views</p>
+</div>
+</div>
+<div class="buy">BELI</div>
+</div>
+
+<div class="card">
+<div class="left">
+<div class="icon">🎮</div>
+<div>
+<h3>Top Up Game</h3>
+<p>ML, FF, PUBG, dll</p>
+</div>
+</div>
+<div class="buy">BELI</div>
+</div>
+
+<div class="card">
+<div class="left">
+<div class="icon">💳</div>
+<div>
+<h3>E-Wallet</h3>
+<p>DANA, OVO, GOPAY</p>
+</div>
+</div>
+<div class="buy">BELI</div>
+</div>
+
+<div class="card">
+<div class="left">
+<div class="icon">🛟</div>
+<div>
+<h3>Support</h3>
+<p>Bantuan pelanggan</p>
+</div>
+</div>
+<div class="buy">CHAT</div>
+</div>
+
+<section class="status">
+
+<div class="status-title">
+<h2>Status Server</h2>
+<div class="online">6/6 Online</div>
+</div>
+
+<div class="grid">
+
+<div class="server">
+<h4>Main Page</h4>
+<div class="ping">59ms</div>
+</div>
+
+<div class="server">
+<h4>CDN Static</h4>
+<div class="ping">84ms</div>
+</div>
+
+<div class="server">
+<h4>CDN Assets</h4>
+<div class="ping">87ms</div>
+</div>
+
+<div class="server">
+<h4>Schedule</h4>
+<div class="ping">29ms</div>
+</div>
+
+</div>
+
+</section>
+
+<a href="https://wa.me/6281234567890" class="whatsapp">
+💬
+</a>
+
+<div class="bottom">
+
+<a class="active">🏠<br>Home</a>
+
+<a>📱<br>Nokos</a>
+
+<a>🛒<br>Order</a>
+
+<a>👤<br>Profil</a>
+
+</div>
 
 </body>
 </html>
