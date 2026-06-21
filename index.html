@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TANZZ KINGNOKOS V5</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Tema merah-hitam premium */
+body{
+background:#050505;
+color:#fff;
+font-family:Poppins,sans-serif;
+margin:0;
+padding-bottom:90px;
+}
+...
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+<img src="logo.png">
+<div>
+<h2>TANZZ KINGNOKOS</h2>
+<p>Layanan Digital Premium</p>
+</div>
+<div class="saldo">
+<span id="saldo">50000</span> IDR
+</div>
+</header>
+
+<!-- SLIDER -->
+<div class="slider">
+<img id="slide" src="banner.jpg">
+</div>
+
+<!-- KATEGORI -->
+<section>
+<div class="card">
+<h3>Nomor Virtual</h3>
+<button onclick="beli('Nomor Virtual')">BELI</button>
+</div>
+
+<div class="card">
+<h3>Aktivasi Akun</h3>
+<button onclick="beli('Aktivasi Akun')">BELI</button>
+</div>
+
+<div class="card">
+<h3>Panel Sosmed</h3>
+<button onclick="beli('Panel Sosmed')">BELI</button>
+</div>
+</section>
+
+<!-- STATUS SERVER -->
+<section>
+<div class="server online">Main Page</div>
+<div class="server online">CDN Static</div>
+<div class="server online">Assets</div>
+<div class="server online">Schedule</div>
+</section>
+
+<!-- LOGIN POPUP -->
+<div id="loginPopup">
+<input placeholder="Username">
+<input type="password" placeholder="Password">
+<button>Masuk</button>
+</div>
+
+<!-- WA FLOAT -->
+<a href="https://wa.me/628xxxxxxxxxx" class="wa">
+💬
+</a>
+
+<script>
+function beli(nama){
+window.open(
+'https://wa.me/628xxxxxxxxxx?text=Saya%20ingin%20beli%20'+nama
+);
+}
+
+const banners=[
+'banner.jpg',
+'banner2.jpg',
+'banner3.jpg'
+];
+
+let i=0;
+setInterval(()=>{
+i=(i+1)%banners.length;
+document.getElementById('slide').src=banners[i];
+},3000);
+</script>
+
+</body>
+</html>
