@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TANZZ KINGNOKOS V9 PREMIUM</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#000;
+color:white;
+padding-bottom:90px;
+}
+
+:root{
+--red:#ff1e1e;
+--card:#0d0d0d;
+}
+
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+background:#050505;
+border-bottom:1px solid #1f1f1f;
+}
+
+.profile{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.profile img{
+width:75px;
+height:75px;
+border-radius:50%;
+border:3px solid var(--red);
+box-shadow:0 0 25px red;
+}
+
+.name h1{
+font-size:34px;
+font-weight:800;
+}
+
+.name h2{
+font-size:26px;
+color:var(--red);
+}
+
+.name p{
+opacity:.7;
+}
+
+.saldo{
+padding:18px;
+border-radius:25px;
+border:2px solid var(--red);
+box-shadow:0 0 25px rgba(255,0,0,.4);
+font-size:28px;
+font-weight:700;
+}
+
+.marquee{
+background:#111;
+padding:12px;
+color:#ff4040;
+font-weight:600;
+overflow:hidden;
+white-space:nowrap;
+}
+
+.marquee span{
+display:inline-block;
+padding-left:100%;
+animation:jalan 15s linear infinite;
+}
+
+@keyframes jalan{
+100%{transform:translateX(-150%)}
+}
+
+.search{
+padding:15px;
+}
+
+.search input{
+width:100%;
+padding:15px;
+border:none;
+outline:none;
+border-radius:15px;
+background:#111;
+color:white;
+font-size:15px;
+}
+
+.banner{
+padding:15px;
+}
+
+.banner img{
+width:100%;
+border-radius:25px;
+box-shadow:0 0 35px rgba(255,0,0,.4);
+}
+
+.quick{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:10px;
+padding:15px;
+}
+
+.quick div{
+background:var(--card);
+padding:15px;
+border-radius:18px;
+text-align:center;
+font-size:13px;
+border:1px solid #222;
+}
+
+.quick span{
+display:block;
+margin-top:8px;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+padding:15px;
+}
+
+.stat{
+background:var(--card);
+padding:25px;
+border-radius:25px;
+text-align:center;
+border:1px solid #222;
+}
+
+.stat h1{
+color:var(--red);
+font-size:38px;
+}
+
+.section-title{
+padding:20px;
+font-size:38px;
+font-weight:800;
+color:var(--red);
+}
+
+.services{
+padding:15px;
+display:grid;
+gap:18px;
+}
+
+.card{
+background:var(--card);
+padding:20px;
+border-radius:25px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+border:1px solid #222;
+}
+
+.left{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.icon{
+font-size:40px;
+width:70px;
+height:70px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#151515;
+border-radius:20px;
+}
+
+.card h3{
+font-size:24px;
+}
+
+.card p{
+opacity:.7;
+}
+
+.btn{
+background:linear-gradient(45deg,#ff0000,#ff4d4d);
+border:none;
+padding:12px 22px;
+color:white;
+border-radius:12px;
+font-weight:700;
+}
+
+.server{
+margin:15px;
+background:#0d0d0d;
+padding:20px;
+border-radius:25px;
+border-left:8px solid #00ff66;
+font-size:22px;
+font-weight:700;
+}
+
+.testi{
+padding:15px;
+display:grid;
+gap:15px;
+}
+
+.testi-card{
+background:#111;
+padding:20px;
+border-radius:20px;
+}
+
+.bottom{
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+height:75px;
+background:#050505;
+display:flex;
+justify-content:space-around;
+align-items:center;
+border-top:1px solid #222;
+}
+
+.bottom a{
+color:white;
+text-decoration:none;
+font-size:14px;
+text-align:center;
+}
+
+.wa{
+position:fixed;
+right:20px;
+bottom:100px;
+width:70px;
+height:70px;
+border-radius:50%;
+background:#25d366;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:32px;
+box-shadow:0 0 35px #25d366;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+
+<div class="profile">
+<img src="logo.png">
+
+<div class="name">
+<h1>TANZZ</h1>
+<h2>KINGNOKOS</h2>
+<p>Layanan Digital Premium</p>
+</div>
+</div>
+
+<div class="saldo">
+Rp <span id="saldo">51099</span>
+</div>
+
+</div>
+
+<div class="marquee">
+<span>🔥 PROMO NOKOS • OTP • PANEL SOSMED • TOPUP E-WALLET • SUPPORT 24 JAM 🔥</span>
+</div>
+
+<div class="search">
+<input type="text" placeholder="Cari layanan...">
+</div>
+
+<div class="banner">
+<img src="banner.jpg">
+</div>
+
+<div class="quick">
+<div>📱<span>NOKOS</span></div>
+<div>🔑<span>OTP</span></div>
+<div>💎<span>PANEL</span></div>
+<div>💳<span>TOPUP</span></div>
+</div>
+
+<div class="stats">
+
+<div class="stat">
+<h1>15K+</h1>
+<p>Member</p>
+</div>
+
+<div class="stat">
+<h1>8K+</h1>
+<p>Order</p>
+</div>
+
+<div class="stat">
+<h1>24/7</h1>
+<p>Support</p>
+</div>
+
+<div class="stat">
+<h1>50+</h1>
+<p>Layanan</p>
+</div>
+
+</div>
+
+<div class="section-title">
+Kategori Layanan
+</div>
+
+<div class="services">
+
+<div class="card">
+<div class="left">
+<div class="icon">📱</div>
+<div>
+<h3>Nomor Virtual</h3>
+<p>Aktivasi berbagai negara</p>
+</div>
+</div>
+<button class="btn">BELI</button>
+</div>
+
+<div class="card">
+<div class="left">
+<div class="icon">🚀</div>
+<div>
+<h3>Aktivasi Akun</h3>
+<p>Aktivasi platform premium</p>
+</div>
+</div>
+<button class="btn">BELI</button>
+</div>
+
+<div class="card">
+<div class="left">
+<div class="icon">💎</div>
+<div>
+<h3>Panel Sosmed</h3>
+<p>Followers, Likes, Views</p>
+</div>
+</div>
+<button class="btn">BELI</button>
+</div>
+
+<div class="card">
+<div class="left">
+<div class="icon">💳</div>
+<div>
+<h3>Top Up E-Wallet</h3>
+<p>Dana, OVO, GoPay</p>
+</div>
+</div>
+<button class="btn">BELI</button>
+</div>
+
+</div>
+
+<div class="server">
+🟢 SERVER ONLINE • CEPAT • AMAN • PREMIUM
+</div>
+
+<div class="section-title">
+Testimoni
+</div>
+
+<div class="testi">
+
+<div class="testi-card">
+⭐⭐⭐⭐⭐ Pelayanan cepat dan terpercaya.
+</div>
+
+<div class="testi-card">
+⭐⭐⭐⭐⭐ Order diproses dalam hitungan detik.
+</div>
+
+<div class="testi-card">
+⭐⭐⭐⭐⭐ Admin ramah dan fast respon.
+</div>
+
+</div>
+
+<div class="wa">💬</div>
+
+<div class="bottom">
+<a href="#">🏠<br>Home</a>
+<a href="#">👤<br>Login</a>
+<a href="#">🛒<br>Order</a>
+<a href="#">⚙️<br>Profil</a>
+</div>
+
+<script>
+setInterval(()=>{
+let saldo=document.getElementById("saldo");
+saldo.innerHTML=(50000+Math.floor(Math.random()*5000)).toLocaleString("id-ID");
+},5000);
+</script>
+
+</body>
+</html>
