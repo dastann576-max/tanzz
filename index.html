@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TANZZ KINGNOKOS</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#050505;
+color:white;
+padding-bottom:100px;
+}
+
+/* HEADER */
+
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px;
+background:#0e0e0e;
+border-bottom:1px solid #1d1d1d;
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.brand img{
+width:50px;
+height:50px;
+border-radius:50%;
+border:2px solid #ff2d2d;
+}
+
+.brand h2{
+font-size:18px;
+}
+
+.brand p{
+font-size:11px;
+color:#aaa;
+}
+
+.balance{
+background:linear-gradient(45deg,#ff2d2d,#ff5c5c);
+padding:10px 15px;
+border-radius:12px;
+font-size:14px;
+font-weight:bold;
+}
+
+/* SLIDER */
+
+.slider{
+padding:15px;
+}
+
+.slider img{
+width:100%;
+border-radius:20px;
+box-shadow:0 0 25px rgba(255,0,0,.4);
+}
+
+/* MENU */
+
+.menu-title{
+padding:0 15px;
+margin-top:10px;
+margin-bottom:10px;
+font-size:18px;
+font-weight:700;
+}
+
+.menu-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+padding:15px;
+}
+
+.menu-card{
+background:#111;
+padding:20px;
+border-radius:20px;
+text-align:center;
+border:1px solid #222;
+cursor:pointer;
+transition:.3s;
+text-decoration:none;
+color:white;
+}
+
+.menu-card:hover{
+transform:translateY(-5px);
+box-shadow:0 0 20px rgba(255,0,0,.2);
+}
+
+.menu-card span{
+font-size:40px;
+display:block;
+margin-bottom:10px;
+}
+
+/* PRODUK */
+
+.product-card{
+background:#111;
+margin:15px;
+padding:20px;
+border-radius:20px;
+border:1px solid #222;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.product-left{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.product-icon{
+font-size:35px;
+}
+
+.product-card h3{
+font-size:16px;
+}
+
+.product-card p{
+font-size:12px;
+color:#aaa;
+}
+
+.buy-btn{
+background:linear-gradient(45deg,#ff2d2d,#ff5a5a);
+border:none;
+padding:10px 20px;
+border-radius:12px;
+color:white;
+font-weight:700;
+cursor:pointer;
+}
+
+/* SERVER */
+
+.server-section{
+padding:15px;
+}
+
+.server-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+margin-top:15px;
+}
+
+.server-card{
+background:#111;
+padding:20px;
+border-radius:18px;
+border:1px solid #222;
+}
+
+.server-card h4{
+margin-bottom:10px;
+}
+
+.online{
+color:#00ff88;
+font-weight:bold;
+}
+
+/* TESTIMONI */
+
+.testi{
+padding:15px;
+}
+
+.testi-card{
+background:#111;
+padding:20px;
+border-radius:18px;
+border:1px solid #222;
+margin-bottom:15px;
+}
+
+/* WA */
+
+.wa{
+position:fixed;
+bottom:90px;
+right:20px;
+width:65px;
+height:65px;
+border-radius:50%;
+background:#25D366;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:30px;
+text-decoration:none;
+box-shadow:0 0 20px rgba(37,211,102,.5);
+}
+
+/* NAVBAR */
+
+.bottom-nav{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:#0e0e0e;
+display:flex;
+justify-content:space-around;
+padding:12px;
+border-top:1px solid #222;
+}
+
+.bottom-nav a{
+text-decoration:none;
+color:white;
+display:flex;
+flex-direction:column;
+align-items:center;
+font-size:12px;
+}
+
+.bottom-nav i{
+font-size:20px;
+margin-bottom:4px;
+}
+
+.center-btn{
+background:#ff2d2d;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex !important;
+justify-content:center;
+align-items:center;
+margin-top:-30px;
+box-shadow:0 0 20px rgba(255,0,0,.5);
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="topbar">
+
+<div class="brand">
+<img src="logo.png">
+<div>
+<h2>TANZZ KINGNOKOS</h2>
+<p>Layanan Digital Premium</p>
+</div>
+</div>
+
+<div class="balance">
+Rp 0
+</div>
+
+</header>
+
+<div class="slider">
+<img id="banner" src="banner1.jpg">
+</div>
+
+<h2 class="menu-title">Kategori Layanan</h2>
+
+<div class="menu-grid">
+
+<a href="#" class="menu-card">
+<span>📱</span>
+Nomor Virtual
+</a>
+
+<a href="#" class="menu-card">
+<span>🚀</span>
+Aktivasi Akun
+</a>
+
+<a href="#" class="menu-card">
+<span>💎</span>
+Panel Sosmed
+</a>
+
+<a href="#" class="menu-card">
+<span>🎮</span>
+Top Up Game
+</a>
+
+<a href="#" class="menu-card">
+<span>💳</span>
+E-Wallet
+</a>
+
+<a href="#" class="menu-card">
+<span>📦</span>
+Reseller
+</a>
+
+</div>
+
+<div class="product-card">
+
+<div class="product-left">
+
+<div class="product-icon">
+📱
+</div>
+
+<div>
+<h3>Nomor Virtual</h3>
+<p>Beli Nomor Virtual Instan</p>
+</div>
+
+</div>
+
+<a href="https://wa.me/6281234567890">
+<button class="buy-btn">
+BELI
+</button>
+</a>
+
+</div>
+
+<section class="server-section">
+
+<h2>Status Server</h2>
+
+<div class="server-grid">
+
+<div class="server-card">
+<h4>Main Page</h4>
+<p class="online">🟢 Online</p>
+<span>29ms</span>
+</div>
+
+<div class="server-card">
+<h4>CDN Static</h4>
+<p class="online">🟢 Online</p>
+<span>14ms</span>
+</div>
+
+<div class="server-card">
+<h4>Database</h4>
+<p class="online">🟢 Online</p>
+<span>17ms</span>
+</div>
+
+<div class="server-card">
+<h4>API Server</h4>
+<p class="online">🟢 Online</p>
+<span>20ms</span>
+</div>
+
+</div>
+
+</section>
+
+<section class="testi">
+
+<h2>Testimoni</h2>
+
+<div class="testi-card">
+⭐⭐⭐⭐⭐<br>
+Pelayanan cepat dan terpercaya.
+</div>
+
+<div class="testi-card">
+⭐⭐⭐⭐⭐<br>
+Proses instan dan harga terjangkau.
+</div>
+
+</section>
+
+<a href="https://wa.me/6281234567890" class="wa">
+💬
+</a>
+
+<nav class="bottom-nav">
+
+<a href="#">
+🏠
+Home
+</a>
+
+<a href="#">
+💰
+Saldo
+</a>
+
+<a href="#" class="center-btn">
+🛒
+</a>
+
+<a href="#">
+📊
+Aktivitas
+</a>
+
+<a href="#">
+👤
+Profil
+</a>
+
+</nav>
+
+<script>
+
+const banners = [
+"banner1.jpg",
+"banner2.jpg",
+"banner3.jpg"
+];
+
+let current = 0;
+
+setInterval(() => {
+
+current++;
+
+if(current >= banners.length){
+current = 0;
+}
+
+document.getElementById("banner").src =
+banners[current];
+
+},3000);
+
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TANZZ KINGNOKOS</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#050505;
+color:white;
+padding-bottom:100px;
+}
+
+/* HEADER */
+
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px;
+background:#0e0e0e;
+border-bottom:1px solid #1d1d1d;
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.brand{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.brand img{
+width:50px;
+height:50px;
+border-radius:50%;
+border:2px solid #ff2d2d;
+}
+
+.brand h2{
+font-size:18px;
+}
+
+.brand p{
+font-size:11px;
+color:#aaa;
+}
+
+.balance{
+background:linear-gradient(45deg,#ff2d2d,#ff5c5c);
+padding:10px 15px;
+border-radius:12px;
+font-size:14px;
+font-weight:bold;
+}
+
+/* SLIDER */
+
+.slider{
+padding:15px;
+}
+
+.slider img{
+width:100%;
+border-radius:20px;
+box-shadow:0 0 25px rgba(255,0,0,.4);
+}
+
+/* MENU */
+
+.menu-title{
+padding:0 15px;
+margin-top:10px;
+margin-bottom:10px;
+font-size:18px;
+font-weight:700;
+}
+
+.menu-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+padding:15px;
+}
+
+.menu-card{
+background:#111;
+padding:20px;
+border-radius:20px;
+text-align:center;
+border:1px solid #222;
+cursor:pointer;
+transition:.3s;
+text-decoration:none;
+color:white;
+}
+
+.menu-card:hover{
+transform:translateY(-5px);
+box-shadow:0 0 20px rgba(255,0,0,.2);
+}
+
+.menu-card span{
+font-size:40px;
+display:block;
+margin-bottom:10px;
+}
+
+/* PRODUK */
+
+.product-card{
+background:#111;
+margin:15px;
+padding:20px;
+border-radius:20px;
+border:1px solid #222;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.product-left{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.product-icon{
+font-size:35px;
+}
+
+.product-card h3{
+font-size:16px;
+}
+
+.product-card p{
+font-size:12px;
+color:#aaa;
+}
+
+.buy-btn{
+background:linear-gradient(45deg,#ff2d2d,#ff5a5a);
+border:none;
+padding:10px 20px;
+border-radius:12px;
+color:white;
+font-weight:700;
+cursor:pointer;
+}
+
+/* SERVER */
+
+.server-section{
+padding:15px;
+}
+
+.server-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+margin-top:15px;
+}
+
+.server-card{
+background:#111;
+padding:20px;
+border-radius:18px;
+border:1px solid #222;
+}
+
+.server-card h4{
+margin-bottom:10px;
+}
+
+.online{
+color:#00ff88;
+font-weight:bold;
+}
+
+/* TESTIMONI */
+
+.testi{
+padding:15px;
+}
+
+.testi-card{
+background:#111;
+padding:20px;
+border-radius:18px;
+border:1px solid #222;
+margin-bottom:15px;
+}
+
+/* WA */
+
+.wa{
+position:fixed;
+bottom:90px;
+right:20px;
+width:65px;
+height:65px;
+border-radius:50%;
+background:#25D366;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:30px;
+text-decoration:none;
+box-shadow:0 0 20px rgba(37,211,102,.5);
+}
+
+/* NAVBAR */
+
+.bottom-nav{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:#0e0e0e;
+display:flex;
+justify-content:space-around;
+padding:12px;
+border-top:1px solid #222;
+}
+
+.bottom-nav a{
+text-decoration:none;
+color:white;
+display:flex;
+flex-direction:column;
+align-items:center;
+font-size:12px;
+}
+
+.bottom-nav i{
+font-size:20px;
+margin-bottom:4px;
+}
+
+.center-btn{
+background:#ff2d2d;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex !important;
+justify-content:center;
+align-items:center;
+margin-top:-30px;
+box-shadow:0 0 20px rgba(255,0,0,.5);
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="topbar">
+
+<div class="brand">
+<img src="logo.png">
+<div>
+<h2>TANZZ KINGNOKOS</h2>
+<p>Layanan Digital Premium</p>
+</div>
+</div>
+
+<div class="balance">
+Rp 0
+</div>
+
+</header>
+
+<div class="slider">
+<img id="banner" src="banner1.jpg">
+</div>
+
+<h2 class="menu-title">Kategori Layanan</h2>
+
+<div class="menu-grid">
+
+<a href="#" class="menu-card">
+<span>📱</span>
+Nomor Virtual
+</a>
+
+<a href="#" class="menu-card">
+<span>🚀</span>
+Aktivasi Akun
+</a>
+
+<a href="#" class="menu-card">
+<span>💎</span>
+Panel Sosmed
+</a>
+
+<a href="#" class="menu-card">
+<span>🎮</span>
+Top Up Game
+</a>
+
+<a href="#" class="menu-card">
+<span>💳</span>
+E-Wallet
+</a>
+
+<a href="#" class="menu-card">
+<span>📦</span>
+Reseller
+</a>
+
+</div>
+
+<div class="product-card">
+
+<div class="product-left">
+
+<div class="product-icon">
+📱
+</div>
+
+<div>
+<h3>Nomor Virtual</h3>
+<p>Beli Nomor Virtual Instan</p>
+</div>
+
+</div>
+
+<a href="https://wa.me/6281234567890">
+<button class="buy-btn">
+BELI
+</button>
+</a>
+
+</div>
+
+<section class="server-section">
+
+<h2>Status Server</h2>
+
+<div class="server-grid">
+
+<div class="server-card">
+<h4>Main Page</h4>
+<p class="online">🟢 Online</p>
+<span>29ms</span>
+</div>
+
+<div class="server-card">
+<h4>CDN Static</h4>
+<p class="online">🟢 Online</p>
+<span>14ms</span>
+</div>
+
+<div class="server-card">
+<h4>Database</h4>
+<p class="online">🟢 Online</p>
+<span>17ms</span>
+</div>
+
+<div class="server-card">
+<h4>API Server</h4>
+<p class="online">🟢 Online</p>
+<span>20ms</span>
+</div>
+
+</div>
+
+</section>
+
+<section class="testi">
+
+<h2>Testimoni</h2>
+
+<div class="testi-card">
+⭐⭐⭐⭐⭐<br>
+Pelayanan cepat dan terpercaya.
+</div>
+
+<div class="testi-card">
+⭐⭐⭐⭐⭐<br>
+Proses instan dan harga terjangkau.
+</div>
+
+</section>
+
+<a href="https://wa.me/6281234567890" class="wa">
+💬
+</a>
+
+<nav class="bottom-nav">
+
+<a href="#">
+🏠
+Home
+</a>
+
+<a href="#">
+💰
+Saldo
+</a>
+
+<a href="#" class="center-btn">
+🛒
+</a>
+
+<a href="#">
+📊
+Aktivitas
+</a>
+
+<a href="#">
+👤
+Profil
+</a>
+
+</nav>
+
+<script>
+
+const banners = [
+"banner1.jpg",
+"banner2.jpg",
+"banner3.jpg"
+];
+
+let current = 0;
+
+setInterval(() => {
+
+current++;
+
+if(current >= banners.length){
+current = 0;
+}
+
+document.getElementById("banner").src =
+banners[current];
+
+},3000);
+
+</script>
+
+</body>
+</html>
